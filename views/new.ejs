@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Entry</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <form class="newform needs-validation" method="post" action="/posts" novalidate>
+        <div class="row container">
+            <div class="col-8 offset-4">
+                <div class="div1 mb-3 mt-3">
+                    <label for="username" class="form-label mg-bt-3" >Username</label>
+                    <input type="text" class="form-control" name="username" placeholder="Enter Username" required >
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                </div>
+                <div class="div2 mb-3">
+                    <label for="que" class="form-label">Enter the Question</label>
+                    <textarea name="que"class="form-control" id="des" cols="30" rows="3" required></textarea>
+                    <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                        Enter the Question
+                      </div>
+                </div>
+                <div class="div2 mb-3">
+                    <label for="ans" class="form-label">Enter the Answer</label>
+                    <textarea name="ans"class="form-control" id="des" cols="30" rows="3" required></textarea>
+                    <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                        Enter the Answer
+                      </div>
+                </div>
+                <button class="btn" style="margin-bottom: 28px;background-color: rgb(198, 18, 18); color: white;">Add</button>
+            </div>    
+        </div>
+    <!-- </form>
+    <!-- <form name="new" method="post" action="/posts"> -->
+        <!-- <input placeholder="Enter the username" type="text" name="username">
+        <br><br>
+        <textarea placeholder="Enter the Question" name="que"></textarea>
+        <br>
+        <textarea placeholder="Enter the Answer" name="ans"></textarea>
+        <br>
+        <button>Submit</button>
+    </form> -->
+</body>
+</html>

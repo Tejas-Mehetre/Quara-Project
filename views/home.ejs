@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        .singlepost {
+            border: solid rgb(82, 82, 82);
+            border-radius: 15px;
+            height: 300px;
+            width: 380px;
+            margin-bottom: 35px;
+            background-color: rgb(161, 161, 161);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .heading{
+            color: maroon;
+            position: relative;
+            top: 15px;
+        }
+        .createbtn{
+            position: relative;
+            left: 1350px;
+            bottom: 30px;
+        }
+        .singlepost:hover {
+            background-color: #e6e6e6;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="heading">Quara</h1>
+    <button onclick="window.location.href='http://localhost:8080/posts/new'" class="btn createbtn btn-success">Create new post</button>
+    <div class="row all">
+        <% for(post of posts){ %>
+            <div class="card card-body singlepost col-6 mb-3 ml-3">
+                <h2 class="card-title">@<%=post.username%></h2>
+                <p class="card-subtitle mb-2 text-body-secondary"><b>Question</b> : <%=post.que%></p>
+                <p class="card-subtitle mb-2 text-body-secondary"><b>Ans:-</b> : <%=post.ans%></p>
+
+                <div class="buttons">
+                    <button class="btn btn-dark" onclick="window.location.href='http://localhost:8080/posts/<%=post.id%>'">See in Detail</button>
+                    <button class="btn btn-dark" onclick="window.location.href='http://localhost:8080/posts/<%=post.id%>/delete'">Delete the post</button>
+                    <button class="btn btn-sm btn-dark" onclick="window.location.href='http://localhost:8080/posts/<%=post.id%>/update'">Update the post</button>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit the post</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        .updatepost{
+            height: 250px;
+            width: 800px;
+            position: relative;
+            left: 400px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Edit your post</h2>
+    <div class="updatepost">
+        <h3>id : <%= post.id %></h3>
+    <h3>Username : <%= post.username %></h3>
+    <h5>Question : <%= post.que %></h5>
+    <form class="newform" action="/posts/<%= post.id %>/update" method="post">
+        <div class="div2 mb-3">
+            <label for="ans" class="form-label"></label>
+            <textarea placeholder="<%= post.ans %>" name="ans"class="form-control" id="des" cols="30" rows="3" required></textarea>
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+              </div>
+        </div>
+        <button class="btn btn-sm btn-dark">Submit</button>
+    </form>
+    </div>
+</body>
+</html>

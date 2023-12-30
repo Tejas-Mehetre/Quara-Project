@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post in detail</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        .singlepost{
+            height: 300px;
+            width: 800px;
+            position: relative;
+            left: 400px;
+            top: 50px;
+            border: solid rgb(184, 184, 184);
+            border-radius: 15px;
+        }
+        .p{
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+        .back{
+            position: relative;
+            left: 400px;
+            top: 60px;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Here is the post in detail...</h2>
+    <div class="singlepost">
+        <h2 class="p">@<%=post.username%></h2>
+        <p class="p"><b>Que</b> : <%=post.que%></p>
+        <p class="p"><b>Ans</b> : <%=post.ans%></p>
+    </div>
+    <a class="back" href="http://localhost:8080/posts">Back</a>
+</body>
+</html>
